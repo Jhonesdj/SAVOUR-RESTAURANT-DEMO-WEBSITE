@@ -1,0 +1,128 @@
+
+  :root {
+    --bg: #0f0f0f;
+    --card: #1a1a1a;
+    --text: #fff;
+    --muted: #aaa;
+    --gold: #d4a574;
+    --red: #ff2d2d;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',Segoe UI,sans-serif}
+  body{background:var(--bg);color:var(--text);line-height:1.6;scroll-behavior:smooth}
+  .container{width:90%;max-width:1200px;margin:0 auto}
+  .btn{background:var(--gold);color:#000;padding:14px 28px;border-radius:30px;font-weight:700;border:none;cursor:pointer;transition:.3s;display:inline-block;text-transform:uppercase;letter-spacing:1px ;text-decoration:none}
+  .btn:hover{transform:translateY(-3px);background:#fff}
+  .btn-outline{background:transparent;border:2px solid var(--gold);color:var(--gold)}
+  .btn-outline:hover{background:var(--gold);color:#000}
+
+  /* NAV */
+  nav{position:fixed;top:0;width:100%;background:rgba(15,15,15,.95);backdrop-filter:blur(10px);z-index:1000;border-bottom:1px solid #222}
+  nav .container{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+  .logo{font-size:1.8rem;font-weight:900;letter-spacing:3px}.logo span{color:var(--gold)}
+  .nav-links{display:flex;gap:30px;list-style:none ;text-decoration:none}
+  .nav-links a{color:var(--text);font-weight:500 ;text-decoration:none}.nav-links a:hover{color:var(--gold)}
+  .menu-toggle{display:none;font-size:2rem;cursor:pointer}
+
+  /* HERO */
+  .hero{height:100vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070') center/cover;display:flex;align-items:center;text-align:center}
+  .hero h1{font-size:4rem;line-height:1.1;margin-bottom:20px;font-weight:900}
+  .hero h1 span{color:var(--gold)}
+  .hero p{color:var(--muted);font-size:1.2rem;margin-bottom:30px;letter-spacing:4px}
+
+  /* SECTIONS */
+  section{padding:100px 0}
+  h2{font-size:2.8rem;text-align:center;margin-bottom:15px}
+  .subtitle{text-align:center;color:var(--muted);margin-bottom:60px;letter-spacing:2px;text-transform:uppercase}
+
+  /* ABOUT */
+  .about-wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .about-img{border-radius:15px;overflow:hidden;height:450px}
+  .about-img img{width:100%;height:100%;object-fit:cover}
+  .about-text h3{font-size:2rem;margin-bottom:20px;color:var(--gold)}
+  .about-text p{color:var(--muted);margin-bottom:20px;font-size:1.1rem}
+
+  /* POPULAR DISHES */
+  .food-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+  .food-card{background:var(--card);border-radius:15px;overflow:hidden;border:1px solid #222;transition:.4s}
+  .food-card:hover{transform:translateY(-10px);border-color:var(--gold)}
+  .food-card img{width:100%;height:220px;object-fit:cover}
+  .food-card .info{padding:22px}
+  .food-card .info h4{font-size:1.3rem;margin-bottom:8px}
+  .food-card .info p{color:var(--muted);font-size:.9rem;margin-bottom:12px}
+  .food-card .price{color:var(--gold);font-weight:800;font-size:1.2rem}
+
+  /* MENU TABS */
+  .menu-tabs{display:flex;justify-content:center;gap:15px;margin-bottom:40px;flex-wrap:wrap}
+  .tab{background:var(--card);border:1px solid #333;padding:10px 24px;border-radius:30px;cursor:pointer;transition:.3s;font-weight:600}
+  .tab.active{background:var(--gold);color:#000;border-color:var(--gold)}
+  .menu-items{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+  .menu-item{background:var(--card);padding:20px;border-radius:12px;display:flex;justify-content:space-between;border-bottom:2px solid transparent;transition:.3s}
+  .menu-item:hover{border-color:var(--gold)}
+  .menu-item h4{margin-bottom:5px}.menu-item small{color:var(--muted)}
+
+  /* GALLERY */
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+  .gallery img{width:100%;height:250px;object-fit:cover;border-radius:12px;transition:.3s;cursor:pointer}
+  .gallery img:hover{transform:scale(1.03)}
+
+  /* LOCATION */
+  .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+  .location-box{background:var(--card);padding:30px;border-radius:12px;border-left:4px solid var(--gold)}
+  .location-box h4{color:var(--gold);margin-bottom:10px}
+
+  /* CONTACT */
+  form{max-width:700px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:10px}
+  form input,form textarea{padding:16px;border-radius:8px;border:1px solid #333;background:#111;color:#fff}
+  form textarea{grid-column:1;min-height:130px;resize:vertical}
+  form button{grid-column:1}
+  input:focus,textarea:focus{outline:none;border-color:var(--gold)}
+
+  /* CTA */
+  .cta{background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=2070') center/cover;text-align:center;padding:120px 0}
+  .cta h2{font-size:3.5rem}
+
+  footer{background:#000;padding:50px 0;text-align:center;border-top:1px solid #222;color:var(--muted)}
+
+  @media(max-width:900px){
+    .about-wrap,.location-grid,.menu-items{grid-template-columns:1fr}
+      .hero h1{font-size:2.5rem}
+    .nav-links{display:none;flex-direction:column;position:absolute;top:70px;right:5%;background:var(--card);padding:25px;border-radius:10px;border:1px solid var(--gold)}
+    .nav-links.show{display:flex}
+    .menu-toggle{display:block}
+  }
+
+
+/* Accessibility, mobile spacing, and reduced-motion support */
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+.skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 2000; padding: .75rem 1rem; background: var(--gold); color: #000; }
+.skip-link:focus { top: 1rem; }
+.nav-links a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.menu-toggle, .tab { font: inherit; color: inherit; }
+.menu-toggle { border: 0; background: transparent; }
+.tab { color: var(--text); }
+.tab:focus-visible { outline-color: var(--gold); }
+.food-card img, .gallery img, .about-img img { display: block; }
+form label { align-self: end; font-weight: 600; }
+form label[for="message"] { grid-column: 1 / -1; }
+form input, form textarea { width: 100%; min-width: 0; font: inherit; }
+.demo-note { max-width: 700px; margin: 0 auto 1rem; padding: .75rem 1rem; border-left: 3px solid var(--gold); color: var(--muted); }
+.location-box a { color: var(--gold); }
+@media (max-width: 600px) {
+  section { padding: 72px 0; }
+  .hero { min-height: 680px; height: 100svh; }
+  .hero h1 { font-size: clamp(2rem, 9vw, 2.7rem); }
+  .hero p { font-size: .9rem; letter-spacing: 2px; }
+  .hero .btn { margin: .35rem !important; padding: 12px 18px; font-size: .8rem; }
+  h2, .cta h2 { font-size: clamp(2rem, 8vw, 2.7rem); }
+  .about-img { height: 300px; }
+  .food-grid { grid-template-columns: 1fr; }
+  .menu-tabs { gap: 8px; }
+  .tab { padding: 9px 16px; }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery img { height: 170px; }
+  form { grid-template-columns: 1fr; }
+  form label, form label[for="message"], form textarea, form button { grid-column: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
